@@ -20,10 +20,10 @@ public class Main {
 
         System.out.println(getAddresses(input));
 
-        System.out.println(countWords("aaa ffff aa bbbb a bb aaa gggggggggggggg", "a"));
+        System.out.println(repeatWordWhenStartWith("aaa ffff aa bbbb a bb aaa gggggggggggggg", "a"));
     }
 
-    public static long countWords(String input, String letter) {
+    public static int repeatWordWhenStartWith(String input, String letter) {
         return Arrays.stream(input.split(" "))
                 .filter(str -> str.charAt(0) == letter.charAt(0))
                 .count();
